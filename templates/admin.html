@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <div class="col bg-header-admin ">Панель Администратора</div>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <h2>Список клиентов</h2>
+        </div>
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"> Имя</th>
+                    <th scope="col">телефон</th>
+                    <th scope="col">email</th>
+                    <th scope="col">изменить</th>
+                    <th scope="col">Удалить</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Иванов Иван</td>
+                    <td>+79161234567</td>
+                    <td>ivanov@example.com</td>
+                    <td>
+                        <div class="btn btn-success">Изменить</div>
+                    </td>
+                    <td>
+                        <div class="btn btn-danger">Удалить</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Петоров Иван</td>
+                    <td>+79162345678</td>
+                    <td>petrov@example.com</td>
+                    <td>
+                        <div class="btn btn-success"><a href="#">Изменить</a></div>
+                    </td>
+                    <td>
+                        <div class="btn btn-danger"><a href="#">Удалить</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Сидоров Иван</td>
+                    <td>Аналитик</td>
+                    <td>sergeev@example.com</td>
+                    <td>
+                        <div class="btn btn-success"><a href="#">Изменить</a></div>
+                    </td>
+                    <td>
+                        <div class="btn btn-danger"><a href="#">Удалить</a></div>
+                    </td>
+               
+            </tbody>
+        </table>
+
+        <div class="row">
+
+            <form class="row d-flex justify-content-center g-3">
+                <div class="col-auto">
+                    <div id="loginHelp" class="form-text">Введите Фамилию и Имя нового пользователя</div>
+                    <input type="text" class="form-control border-login" id="exampleInputLogin"
+                        aria-describedby="loginHelp" required>
+
+                </div>
+                <div class="col-auto">
+                    <div id="passwordHelp" class="form-text">Введите роль нового пользователя</div>
+                    <input type="password" class="form-control border-login" id="exampleInputPassword1"
+                        aria-describedby="passwordHelp" required>
+
+                </div>
+                <div class="col-auto">
+
+                    <button type="submit" class="btn btn-primary button-login" style="margin-top: 12%;">Добавить
+                        пользователей</button>
+                </div>
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+{% endblock %}
